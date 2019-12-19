@@ -13,7 +13,7 @@ Copyright 2019 haeuncs
 
 MIT
 
-### Dependency face api
+### Dependency 
 
 Copyright 2019 [supachaic](https://github.com/supachaic)
 
