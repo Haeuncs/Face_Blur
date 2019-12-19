@@ -123,7 +123,7 @@ const ImageInput = () => {
   const saveCanvas = () => {
     const canvas = myRef.current;
     const dataURL = canvas.toDataURL("image/jpeg");
-    downloadURI("data:" + dataURL, "yourImage.png");
+    downloadURI("data:" + dataURL, "yourImage.jpeg");
   };
   // 동적으로 뷰를 뿌리기 위해서 사용하는 부분
   const resize = () => {
