@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9442beb2c07e52a4d686eae5428b3d7f",
+    "revision": "a1f89e16e697f64b47c98997f73ddf89",
     "url": "/Face_Blur/index.html"
   },
   {
-    "revision": "a80331ce6648fb640727",
+    "revision": "de8be86a5cedaf6cb93a",
     "url": "/Face_Blur/static/css/main.e970716e.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Face_Blur/static/js/2.a8084f21.chunk.js"
   },
   {
-    "revision": "a80331ce6648fb640727",
-    "url": "/Face_Blur/static/js/main.843702fa.chunk.js"
+    "revision": "de8be86a5cedaf6cb93a",
+    "url": "/Face_Blur/static/js/main.a25e3423.chunk.js"
   },
   {
     "revision": "235e9f4368fe1c19f69b",
