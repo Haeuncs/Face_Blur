@@ -58,12 +58,14 @@ const ImageInput = () => {
           console.log(temp);
         }
       });
+    } else {
+      console.log("이미지 못 받아옴");
     }
   };
 
   const handleFileChange = async () => {
     console.log("handleFile");
-    console.log(URL.createObjectURL(fileRef.current.files[0]));
+    // console.log(URL.createObjectURL(fileRef.current.files[0]));
     // resetState();
     await setInitState({
       imageURL: URL.createObjectURL(fileRef.current.files[0]),
@@ -144,25 +146,65 @@ const ImageInput = () => {
   {
     const { imageURL, detections, match } = initState;
 
-    return (
-      <div>
-        <div className="flexContainer">
-          <input
-            ref={fileRef}
-            id="myFileUpload"
-            type="file"
-            onChange={handleFileChange}
-            accept=".jpg, .jpeg, .png"
-          />
-          <button onClick={saveCanvas}>이미지 파일 저장하기</button>
-        </div>
+    const titles = ["✨얼굴 블러 처리✨", "✨FACE BLUR YOUR IMAGE✨"];
+    const saves = ["⬇️ 블러 처리 이미지 다운로드", "⬇️ Download Blured Image"];
+    const uploads = ["🤳 얼굴 이미지 올리기", "🤳 Upload Face Image"];
+    const [currentTitle, setCurrentTitle] = useState(
+      "✨FACE BLUR YOUR IMAGE✨"
+    );
+    const [currentSave, setCurrentSave] = useState("⬇️ Download Blured Image");
+    const [currentUpload, setCurrentUpload] = useState("🤳 Upload Face Image");
+    var index = 0;
+    useEffect(() => {
+      setInterval(() => {
+        if (titles.length > index) {
+          setCurrentTitle(titles[index]);
+          setCurrentSave(saves[index]);
+          setCurrentUpload(uploads[index]);
+          index++;
+          if (index == titles.length) {
+            index = 0;
+          }
+        }
+      }, 2000);
+    }, []);
 
+    return (
+      <div
+        style={{
+          backgroundColor: "#1a1a1a",
+          height: "100vh",
+          width: "100vw",
+          margin: -8
+        }}
+      >
+        <div id="titleText">{currentTitle}</div>
+        <div className="flexContainer">
+          <button className="buttonStyle">
+            <label style={{ cursor: "pointer" }}>
+              {currentUpload}
+              <input
+                style={{ display: "none" }}
+                ref={fileRef}
+                type="file"
+                onChange={handleFileChange}
+                accept=".jpg, .jpeg, .png"
+              />
+            </label>
+          </button>
+          <button className="buttonStyle" onClick={saveCanvas}>
+            {currentSave}
+          </button>
+        </div>
+        <div style={{ height: "1rem" }}></div>
         <canvas ref={myRef} />
         <img
           src={imageURL}
           ref={imageRef}
           alt="imageURL"
-          style={{ display: "none" }}
+          style={{
+            display: "none"
+          }}
         />
         {initState.loading === true ? (
           <div className="flexContainerCenter">

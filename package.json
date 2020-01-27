@@ -1,7 +1,7 @@
 {
-  "name": "react-face-recognition",
-  "version": "0.1.0",
-  "homepage": "http://supachaic.github.io/react-face-recognition",
+  "name": "face_blur",
+  "version": "0.0.1",
+  "homepage": "http://Haeuncs.github.io/Face_Blur",
   "private": true,
   "dependencies": {
     "dom-to-image": "^2.6.0",
