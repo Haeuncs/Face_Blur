@@ -5,7 +5,7 @@ ReactJS
 detects and blur faces in photos.🧏🏻‍♀️<br/>
 You can save the blurred image file right away.
 
-Support chrome web browser
+Support chrome web browser -> [Demo](https://haeuncs.github.io/Face_Blur/)
 
  <img src="./ReadmeImages/faceblur.png" width="700">
 
