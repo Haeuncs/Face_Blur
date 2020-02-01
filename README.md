@@ -1,11 +1,13 @@
-# 🤘 MAKE BLUR YOUR FACE 🤘
+# 🤘 FACE BLUR 🤘
 
 ReactJS
 
-detects and blurs faces in photos.🧏🏻‍♀️<br/>
+detects and blur faces in photos.🧏🏻‍♀️<br/>
 You can save the blurred image file right away.
 
- <img src="./ReadmeImages/blured.jpg" width="500">
+Support chrome web browser
+
+ <img src="./ReadmeImages/faceblur.png" width="700">
 
 ## License
 
@@ -13,7 +15,9 @@ Copyright 2019 haeuncs
 
 MIT
 
-### Dependency 
+### Dependency
+
+Copyright (c) 2018 [Vincent Mühler](https://github.com/justadudewhohacks/face-api.js/blob/master/LICENSE)
 
 Copyright 2019 [supachaic](https://github.com/supachaic)
 
